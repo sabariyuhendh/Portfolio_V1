@@ -1,8 +1,11 @@
 import './index.css'
+import Navbar from './components/Navbar'
+import Home from './Pages/Home'
 function App() {
   return (
     <>
-      <h1>HI</h1>
+      <Navbar />
+      <Home />
     </>
   )
 }
