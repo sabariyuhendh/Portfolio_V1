@@ -1,15 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
         <>
-    <div className='flex justify-between items-center py-2 px-32 text-2xl bg-gray-900 text-white'>
-        <h3 className='font-bold'>Sabari Yuhendhran</h3>
+    <div className='flex justify-between items-center py-3 px-32 bg-black text-white'>
+        <h3 className='font-bold text-2xl'>Sabari Yuhendhran</h3>
         <div className='flex gap-4'>
-            <a href="#" className='font-medium hover:text-gray-300'>Home</a>
-            <a href="#" className='font-medium hover:text-gray-300'>Projects</a>
-            <a href="#" className='font-medium hover:text-gray-300'>About</a>
-            <a href="#" className='font-medium hover:text-gray-300'>Contact</a>
+            <Link to="/" className='font-medium text-xl hover:text-gray-300'>Home</Link>
+            <Link to="/projects" className='font-medium text-xl hover:text-gray-300'>Projects</Link>
+            <Link to="/about" className='font-medium text-xl hover:text-gray-300'>About</Link>
+            <Link to="/contact" className='font-medium text-xl hover:text-gray-300'>Contact</Link>
         </div>
     </div>
     </>  

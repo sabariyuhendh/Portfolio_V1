@@ -8,6 +8,7 @@ function Home() {
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 ml-2">
           Sabari
         </span>
+        ✌️
       </h1>
       <h3 className='text-gray-400 text-2xl mt-4'>Aspiring Software Developer & DSA Enthusiast</h3>
     </div>
