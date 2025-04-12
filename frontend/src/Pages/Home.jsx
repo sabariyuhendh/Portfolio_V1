@@ -5,8 +5,8 @@ import Contact from './Contact'
 
 function Home() {
   return (
-    <div className="snap-y snap-mandatory h-screen overflow-y-scroll">
-      <section id="home" className="snap-start h-screen flex items-center justify-center">
+    <div className="h-full">
+      <section id="home" className="min-h-screen flex items-center justify-center px-4 md:px-16 lg:px-32">
         <div className="min-h-screen flex flex-col items-center justify-center bg-black">
           <h1 className="text-6xl font-bold text-white">
             Hello World, I'm 
@@ -18,15 +18,15 @@ function Home() {
         </div>
       </section>
 
-      <section id="projects" className="snap-start h-screen flex items-center justify-center">
+      <section id="projects" className="min-h-screen flex items-center justify-center px-4 md:px-16 lg:px-32">
         <Projects />
       </section>
 
-      <section id="about" className="snap-start h-screen flex items-center justify-center">
+      <section id="about" className="min-h-screen flex items-center justify-center px-4 md:px-16 lg:px-32">
         <About />
       </section>
 
-      <section id="contact" className="snap-start h-screen flex items-center justify-center">
+      <section id="contact" className="min-h-screen flex items-center justify-center px-4 md:px-16 lg:px-32">
         <Contact />
       </section>
     </div>
