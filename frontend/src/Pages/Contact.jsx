@@ -18,6 +18,32 @@ function Contact() {
               Email Me
             </a>
           </div>
+          <div className="flex justify-center gap-4 mt-6">
+            <a 
+              href="https://www.linkedin.com/in/sabariyuhendhran" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-gradient-to-r from-blue-600 to-blue-800 hover:bg-gradient-to-l text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300"
+            >
+              LinkedIn
+            </a>
+            <a 
+              href="https://github.com/sabariyuhendh" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-gradient-to-r from-gray-700 to-gray-900 hover:bg-gradient-to-l text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300"
+            >
+              GitHub
+            </a>
+            <a 
+              href="https://twitter.com/yourusername" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-gradient-to-r from-blue-400 to-blue-600 hover:bg-gradient-to-l text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300"
+            >
+              Twitter
+            </a>
+          </div>
         </div>
       </div>
     </div>
