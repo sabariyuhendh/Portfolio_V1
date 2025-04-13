@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Home from './Pages/Home'
-import useScrollDirection from './hooks/usescrolldirection'
+import useScrollDirection from './hooks/useScrollDirection' 
 
 function App() {
   const scrollDirection = useScrollDirection()
