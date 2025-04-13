@@ -10,7 +10,7 @@ function Home() {
         <div className="min-h-screen flex flex-col items-center justify-center bg-black">
           <h1 className="text-6xl font-bold text-white">
             Hello World, I'm 
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-cyan-400 ml-2">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-pink-500 ml-2">
               Sabari
             </span>
           </h1>

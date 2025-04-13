@@ -1,4 +1,20 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+
+function AnimatedButton({ children, onClick }) {
+  return (
+    <motion.button
+      onClick={onClick}
+      className="relative group"
+      whileHover={{ y: -2 }}
+      transition={{ duration: 0.2 }}
+    >
+      <span className="font-medium text-lg">{children}</span>
+      <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-white transition-all group-hover:w-full group-hover:left-0"></span>
+      <span className="absolute -bottom-1 right-1/2 w-0 h-0.5 bg-white transition-all group-hover:w-full group-hover:right-0"></span>
+    </motion.button>
+  )
+}
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -13,18 +29,14 @@ function Navbar() {
         <div className='flex justify-between h-16 items-center'>
           <h3 className='font-bold text-xl sm:text-2xl'>Sabari Yuhendhran</h3>
           
-          <div className='hidden md:flex md:gap-4'>
-            <button onClick={() => scrollToSection('home')} 
-              className='font-medium text-lg hover:text-gray-300'>Home</button>
-            <button onClick={() => scrollToSection('projects')} 
-              className='font-medium text-lg hover:text-gray-300'>Projects</button>
-            <button onClick={() => scrollToSection('about')} 
-              className='font-medium text-lg hover:text-gray-300'>About</button>
-            <button onClick={() => scrollToSection('contact')} 
-              className='font-medium text-lg hover:text-gray-300'>Contact</button>
+          <div className='hidden md:flex md:gap-8'>
+            <AnimatedButton onClick={() => scrollToSection('home')}>Home</AnimatedButton>
+            <AnimatedButton onClick={() => scrollToSection('projects')}>Projects</AnimatedButton>
+            <AnimatedButton onClick={() => scrollToSection('about')}>About</AnimatedButton>
+            <AnimatedButton onClick={() => scrollToSection('contact')}>Contact</AnimatedButton>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu button remains the same */}
           <div className='md:hidden'>
             <button onClick={() => setIsOpen(!isOpen)} className='text-white'>
               {isOpen ? (
@@ -40,18 +52,14 @@ function Navbar() {
           </div>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile menu with animated buttons */}
         {isOpen && (
           <div className='md:hidden'>
-            <div className='flex flex-col gap-2 pb-3'>
-              <button onClick={() => scrollToSection('home')} 
-                className='font-medium text-lg hover:text-gray-300'>Home</button>
-              <button onClick={() => scrollToSection('projects')} 
-                className='font-medium text-lg hover:text-gray-300'>Projects</button>
-              <button onClick={() => scrollToSection('about')} 
-                className='font-medium text-lg hover:text-gray-300'>About</button>
-              <button onClick={() => scrollToSection('contact')} 
-                className='font-medium text-lg hover:text-gray-300'>Contact</button>
+            <div className='flex flex-col gap-4 pb-3'>
+              <AnimatedButton onClick={() => scrollToSection('home')}>Home</AnimatedButton>
+              <AnimatedButton onClick={() => scrollToSection('projects')}>Projects</AnimatedButton>
+              <AnimatedButton onClick={() => scrollToSection('about')}>About</AnimatedButton>
+              <AnimatedButton onClick={() => scrollToSection('contact')}>Contact</AnimatedButton>
             </div>
           </div>
         )}
